@@ -9,10 +9,6 @@ is written in [Go](https://golang.org/).
 * Install [Docker](https://docs.docker.com/get-docker/)
 * Install [Docker Compose](https://docs.docker.com/compose/install/)
 * Clone this repository
-* Create a `.env` file from the example:
-    ```shell script
-    cp .env.dist .env
-    ```
 
 ## Commands
 * Build the container (with your user permissions)

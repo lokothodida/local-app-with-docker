@@ -1,7 +1,6 @@
 package main
 
 import (
-	"context"
 	"fmt"
 	"github.com/go-redis/redis/v8"
 	"log"
@@ -15,7 +14,7 @@ func main() {
 	})
 
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		val, err := rdb.Incr(context.Background(), "counter").Result()
+		visitors, err := rdb.Incr(r.Context(), "counter").Result()
 
 		if err != nil {
 			w.WriteHeader(http.StatusInternalServerError)
@@ -23,7 +22,7 @@ func main() {
 			return
 		}
 
-		w.Write([]byte(fmt.Sprintf("Hello world! x%d", val)))
+		w.Write([]byte(fmt.Sprintf("Hello world! You are visitor #%d", visitors)))
 	})
 
 	port := os.Getenv("HTTP_PORT")
