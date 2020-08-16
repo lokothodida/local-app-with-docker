@@ -15,13 +15,17 @@ is written in [Go](https://golang.org/).
     ```
 
 ## Commands
+* Build the container (with your user permissions)
+    ```shell script
+    $ make build
+    ```
 * Start the application and infrastructure
     ```shell script
-    $ docker-compose up
+    $ make start
     ```
 * Run the web server in the container (served on port `HTTP_PORT` in your [`.env`](.env.dist) file)
     ```shell script
-    $ docker-compose exec app go run main.go
+    $ make web
     ```
 * Or run the web server from the host machine:
     ```shell script
@@ -29,13 +33,13 @@ is written in [Go](https://golang.org/).
     ```
 * Enter the container
     ```shell script
-    $ docker-compose exec app sh
+    $ make sh
     ```
 * Stop the application and infrastructure
     ```shell script
-    $ docker-compose down
+    $ make stop
     ```
 
 ## TODO
 - [ ] Add link to final article
-- [ ] Add fix for permission issues when editing files created by the container
+- [x] Add fix for permission issues when editing files created by the container
