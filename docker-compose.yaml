@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  go:
+    working_dir: /app
+    command: sleep infinity
+    image: golang:1.14-alpine
+    volumes:
+      - ./:/app
+    env_file:
+      - .env
+    ports:
+      - ${HTTP_PORT}:${HTTP_PORT}
+
+  redis:
+    command: redis-server --port ${REDIS_PORT}
+    image: redis:6.0-alpine
+    env_file:
+      - .env
+    ports:
+      - ${REDIS_PORT}:${REDIS_PORT}
