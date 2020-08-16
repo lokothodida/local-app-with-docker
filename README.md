@@ -1,4 +1,4 @@
-## Improve your local web app development with Docker
+## Local "Dockerized" Go Application
 This is the companion codebase for the article [Improve your local web app development with Docker](https://lawrence.okothodida.com/feed).
 
 It is an HTTP server that simply says *"Hello, world!"*, with a counter for
@@ -6,19 +6,15 @@ how many hits it has received. These hits are counted in Redis and the server
 is written in Go.
 
 ## Installation
-* Install Docker
-* Install Docker-Compose
-* Pull this repository locally
+* Install [Docker](https://docs.docker.com/get-docker/)
+* Install [Docker-Compose](https://docs.docker.com/compose/install/)
+* Clone this repository
 * Create a `.env` file from the example:
     ```shell script
     cp .env.dist .env
     ```
 
 ## Commands
-* Start the application and infrastructure
-    ```shell script
-    $ docker-compose up
-    ```
 * Start the application and infrastructure
     ```shell script
     $ docker-compose up
