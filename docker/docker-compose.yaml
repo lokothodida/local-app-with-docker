@@ -4,8 +4,7 @@ services:
   app:
     working_dir: /app
     command: sleep infinity
-    build:
-      context: ./
+    build: ./
     volumes:
       - ../:/app
     env_file:

@@ -27,7 +27,7 @@ is written in [Go](https://golang.org/).
     ```shell script
     $ source .env && go run main.go
     ```
-* Enter the container
+* Enter the `go` container
     ```shell script
     $ make sh
     ```
