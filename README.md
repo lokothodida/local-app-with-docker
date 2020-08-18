@@ -13,7 +13,7 @@ is written in [Go](https://golang.org/).
 ## Commands
 * Build the container (with your user permissions)
     ```shell script
-    $ make build
+    $ make container
     ```
 * Start the application and infrastructure
     ```shell script
