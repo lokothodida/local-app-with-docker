@@ -21,7 +21,7 @@ is written in [Go](https://golang.org/).
     ```
 * Run the web server in the container (served on port `HTTP_PORT` in your [`.env`](.env.dist) file)
     ```shell script
-    $ make web
+    $ make server
     ```
 * Or run the web server from the host machine:
     ```shell script

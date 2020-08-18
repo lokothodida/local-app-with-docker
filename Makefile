@@ -20,8 +20,8 @@ stop: .env
 sh: .env
 	$(DOCKER_COMPOSE) exec app sh
 
-.PHONY: web
-web: app
+.PHONY: server
+server: app
 	$(DOCKER_COMPOSE) exec app bin/app
 
 .PHONY: app
