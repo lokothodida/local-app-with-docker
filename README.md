@@ -25,7 +25,8 @@ is written in [Go](https://golang.org/).
     ```
 * Or run the web server from the host machine:
     ```shell script
-    $ source .env && go run main.go
+    $ go build -o bin/app
+    $ source .env && bin/app
     ```
 * Enter the `go` container
     ```shell script
