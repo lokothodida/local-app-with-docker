@@ -1,5 +1,5 @@
 ## Local "Dockerized" Go Application
-This is the companion codebase for the article [*Improve your local web app development with Docker*](https://lawrence.okothodida.com/feed).
+This is the companion codebase for the article [*Improve your local web app development with Docker*](https://lawrence.okothodida.com/2020/08/21/improve-your-local-web-app-development-with-docker/).
 
 It is an HTTP server that simply says *"Hello, world!"*, with a counter for
 how many hits it has received. These hits are counted in [Redis](https://redis.io/) and the server
@@ -36,7 +36,3 @@ is written in [Go](https://golang.org/).
     ```shell script
     $ make stop
     ```
-
-## TODO
-- [ ] Add link to final article
-- [x] Add fix for permission issues when editing files created by the container
